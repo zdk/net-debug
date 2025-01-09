@@ -20,6 +20,7 @@ RUN apt-get update -qq && \
                    traceroute \
                    iptables \
                    net-tools \
+                   iputils-ping \
                    socat \
                    iproute2 \
                    telnet \
