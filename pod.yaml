@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: net-debug
+  namespace: default
+spec:
+  containers:
+    - name: net-debug
+      image: warachet/net-debug:latest
+      imagePullPolicy: IfNotPresent
+  restartPolicy: Never
