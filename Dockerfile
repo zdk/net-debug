@@ -2,8 +2,9 @@ FROM ubuntu:plucky
 
 WORKDIR /root
 
-RUN apt-get update -qq && \
-                   apt-get install -y apt-transport-https \
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get install -y gnupg \
+                   apt-transport-https \
                    ca-certificates \
                    software-properties-common \
                    vim \
@@ -24,6 +25,7 @@ RUN apt-get update -qq && \
                    socat \
                    iproute2 \
                    telnet \
-                   openssl
-
+                   openssl \
+                   redis-tools \
+                   postgresql-client
 CMD [ "/bin/bash" ]
