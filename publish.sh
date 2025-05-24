@@ -1,4 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
-docker build -t ${DOCKER_REPO} .
-docker push ${DOCKER_REPO}
+
+# Build the image
+docker build -t net-debug .
+
+# Tag and push to GitHub Container Registry
+docker tag net-debug ${GHCR_REPO}
+docker push ${GHCR_REPO}
+
+# Tag and push to Docker Hub
+docker tag net-debug ${DOCKERHUB_REPO}
+docker push ${DOCKERHUB_REPO}
