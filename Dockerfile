@@ -8,6 +8,7 @@ RUN apt-get install -y gnupg \
                    ca-certificates \
                    software-properties-common \
                    vim \
+                   strace \
                    screen \
                    curl \
                    wget \
