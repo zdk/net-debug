@@ -15,9 +15,9 @@ Bundled networking tools to troubleshooting networking in kubernetes.
 
 To debug any networking issues in the k8s cluster,
 
-Run:
+*Run:*
 
-`kubectl run -it --image=warachet/net-debug:latest debug-pod`
+`kubectl run -it --image=ghcr.io/zdk/net-debug:latest debug-pod`
 
 Or apply `./pod.yaml` manifest by:
 
@@ -29,4 +29,4 @@ Then, exec into pod:
 
 In case, you just want use only in container
 
-`docker run -it warachet/net-debug:latest`
+`docker run -it ghcr.io/zdk/net-debug:latest`
