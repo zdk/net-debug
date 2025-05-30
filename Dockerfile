@@ -19,6 +19,7 @@ RUN apt-get install -y gnupg \
                    jq \
                    dnsutils \
                    tcpdump \
+                   tshark \
                    traceroute \
                    iptables \
                    net-tools \
