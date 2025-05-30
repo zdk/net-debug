@@ -1,7 +1,5 @@
 FROM ubuntu:plucky
-
 WORKDIR /root
-
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y gnupg \
                    apt-transport-https \
@@ -30,4 +28,18 @@ RUN apt-get install -y gnupg \
                    openssl \
                    redis-tools \
                    postgresql-client
+
+RUN echo 'cat << "EOF"' >> /root/.bashrc && \
+                   echo '███    ██ ███████ ████████       ██████  ███████ ██████  ██    ██  ██████' >> /root/.bashrc && \
+                   echo '████   ██ ██         ██          ██   ██ ██      ██   ██ ██    ██ ██' >> /root/.bashrc && \
+                   echo '██ ██  ██ █████      ██    █████ ██   ██ █████   ██████  ██    ██ ██   ███' >> /root/.bashrc && \
+                   echo '██  ██ ██ ██         ██          ██   ██ ██      ██   ██ ██    ██ ██    ██' >> /root/.bashrc && \
+                   echo '██   ████ ███████    ██          ██████  ███████ ██████   ██████   ██████' >> /root/.bashrc && \
+                   echo 'EOF' >> /root/.bashrc && \
+                   echo 'echo' >> /root/.bashrc && \
+                   echo 'echo "========================================================================="' >> /root/.bashrc && \
+                   echo 'echo "|                  Network Debugging Container                          |"' >> /root/.bashrc && \
+                   echo 'echo "========================================================================="' >> /root/.bashrc && \
+                   echo 'echo' >> /root/.bashrc
+
 CMD [ "/bin/bash" ]
