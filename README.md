@@ -19,11 +19,11 @@ Run:
 
 `kubectl run -it --image=warachet/net-debug:latest debug-pod`
 
-Or apply ./pod.yaml manifest by
+Or apply `./pod.yaml` manifest by:
 
 `kubectl apply -f ./pod.yaml`
 
-Then, exec into pod
+Then, exec into pod:
 
 `kubectl exec -it net-debug -- /bin/bash`
 
